@@ -1,7 +1,9 @@
 import prompts from 'prompts';
+import { Bootstrapper } from 'package-bootstrapper';
 
-export const main = () =>
-  prompts({
+export const main = (appName: string) => {
+  const bootstrapper = Bootstrapper(appName);
+  return prompts({
     type: 'select',
     name: 'value',
     message: 'select it',
@@ -20,3 +22,4 @@ export const main = () =>
     ],
     initial: 1,
   });
+};

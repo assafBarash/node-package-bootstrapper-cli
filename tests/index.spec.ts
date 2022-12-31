@@ -3,7 +3,7 @@ import { main } from '../src/main';
 
 const run = async (input: string[] = []) => {
   prompts.inject(input);
-  return await main();
+  return await main('test-app');
 };
 
 describe('cli tool', () => {

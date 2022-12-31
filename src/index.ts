@@ -2,4 +2,10 @@
 
 import { main } from './main';
 
-main();
+const [, , appName] = process.argv;
+
+if (!appName) {
+  throw Error('app name must be provided');
+}
+
+main(appName);
