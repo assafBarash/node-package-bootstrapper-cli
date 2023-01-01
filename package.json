@@ -16,7 +16,8 @@
     "deploy": "npx dgc -ea",
     "predeploy": "npm run test",
     "postdeploy": "npm version patch",
-    "postversion": "npm publish"
+    "postversion": "npm publish",
+    "update-bootstrap": "npm i --save package-bootstrapper@latest"
   },
   "repository": {
     "type": "git",
@@ -30,8 +31,9 @@
   },
   "homepage": "https://github.com/assafBarash/node-package-bootstrapper-cli#readme",
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "mri": "^1.1.6",
-    "package-bootstrapper": "^1.0.7",
+    "package-bootstrapper": "^1.0.17",
     "prompts": "^2.3.2"
   },
   "devDependencies": {
