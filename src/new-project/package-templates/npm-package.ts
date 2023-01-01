@@ -1,6 +1,7 @@
 import { BootstrapPromptOption } from './types';
 import deepmerge from 'deepmerge';
 import nodeBase from './node-base';
+import path from 'path';
 
 const npmPackage: BootstrapPromptOption = deepmerge<BootstrapPromptOption>(
   nodeBase,
@@ -17,6 +18,9 @@ const npmPackage: BootstrapPromptOption = deepmerge<BootstrapPromptOption>(
           main: 'build/index.js',
           typings: 'build/index.js',
         },
+      },
+      files: {
+        '.npmignore': ['node_modules', 'src', 'tests'].join('\n'),
       },
     },
   }
